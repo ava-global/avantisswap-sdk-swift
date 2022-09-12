@@ -1,6 +1,0 @@
-public struct AvantisSwapSDK {
-    public private(set) var text = "Hello, World!"
-
-    public init() {
-    }
-}
