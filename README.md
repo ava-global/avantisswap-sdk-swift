@@ -4,6 +4,15 @@ Inspired by the [Pancakeswap SDK](https://github.com/pancakeswap/pancake-swap-sd
 
 You can refer to the Uniswap SDK documentation [uniswap.org](https://docs.uniswap.org/sdk/2.0.0/).
 
+## Installation
+
+### Swift Package Manager
+
+Use Xcode to add to the project (**File -> Swift Packages**) or add this to your `Package.swift` file:
+```swift
+.package(url: "git@github.com:ava-global/avantisswap-sdk-swift.git", from: "1.0.0")
+```
+
 ## Running tests
 
 First clone the repository:
