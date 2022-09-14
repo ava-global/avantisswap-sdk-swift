@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import web3
 import BigInt
 
 public class Pair {
@@ -41,8 +40,8 @@ public class Pair {
         guard
             let hashCode = Constant.initCodeHashMap[token0.chainId],
             let factoryAddress = Constant.factoryAddressMap[token0.chainId],
-            let token0AddressData = token0.address.web3.hexData,
-            let token1AddressData = token1.address.web3.hexData,
+            let token0AddressData = token0.address.hexData,
+            let token1AddressData = token1.address.hexData,
             let prefixData = Data(hex: "ff"),
             let factoryAddressData = Data(hex: factoryAddress),
             let hashCodeData = Data(hex: hashCode)
@@ -50,9 +49,9 @@ public class Pair {
             throw PancakeSwapError.notSameChain
         }
         
-        let addressHash = (token0AddressData + token1AddressData).web3.keccak256
+        let addressHash = (token0AddressData + token1AddressData).keccak256
         let data = prefixData + factoryAddressData + addressHash + hashCodeData
-        let addressString = data.web3.keccak256.suffix(20).web3.hexString
+        let addressString = data.keccak256.suffix(20).hexString
         
         return addressString
     }
