@@ -19,7 +19,7 @@ public enum RouteError: Error,
 
 public class Route {
     public let pairs: [Pair]
-    public let path: [Currency]
+    public let path: [Token]
     public let input: Currency
     public let output: Currency
     public let midPrice: Price
@@ -60,7 +60,7 @@ public class Route {
             }
         }
         
-        var path: [Currency] = []
+        var path: [Token] = []
         
         if let inputToken = input as? Token {
             path.append(inputToken)
