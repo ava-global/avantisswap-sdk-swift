@@ -32,11 +32,15 @@ let package = Package(
         .target(
             name: "AvantisSwapSDK",
             dependencies: [.target(name: "keccaktiny"),
-                           "BigInt"]),
+                           "BigInt"],
+            path: "Sources/AvantisSwapSDK"
+        ),
         .testTarget(
             name: "AvantisSwapSDKTests",
             dependencies: ["AvantisSwapSDK",
                            "Quick",
-                           "Nimble"]),
+                           "Nimble"],
+            path: "Tests/AvantisSwapSDKTests"
+        ),
     ]
 )
