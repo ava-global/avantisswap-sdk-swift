@@ -6,7 +6,7 @@
  * License: CC0, attribution kindly requested. Blame taken too,
  * but not liability.
  */
-#include "keccak-tiny.h"
+#include "a-keccak-tiny.h"
 
 #include <stdint.h>
 #include <stdio.h>
