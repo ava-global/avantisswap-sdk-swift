@@ -43,9 +43,10 @@ public class Currency: CurrencyProtocol {
 }
 
 extension Currency: Equatable {
-    
     public static func == (lhs: Currency,
                            rhs: Currency) -> Bool {
-        return lhs === rhs
+        return lhs.symbol == rhs.symbol &&
+        lhs.decimals == rhs.decimals &&
+        lhs.name == rhs.name
     }
 }
