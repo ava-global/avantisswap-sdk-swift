@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt",
-                 "5.0.0"..<"5.3.0"),
+                 from: "5.0.0"),
         .package(url: "https://github.com/Quick/Quick.git",
                  from: "5.0.0"),
         .package(url: "https://github.com/Quick/Nimble.git",
@@ -24,14 +24,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "aKeccaktiny",
+            name: "keccaktiny",
             dependencies: [],
             path: "Libraries/keccak-tiny",
             exclude: ["module.map"]
         ),
         .target(
             name: "AvantisSwapSDK",
-            dependencies: [.target(name: "aKeccaktiny"),
+            dependencies: [.target(name: "keccaktiny"),
                            "BigInt"],
             path: "Sources/AvantisSwapSDK"
         ),
