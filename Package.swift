@@ -24,14 +24,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "keccaktiny",
+            name: "aKeccaktiny",
             dependencies: [],
             path: "Libraries/keccak-tiny",
             exclude: ["module.map"]
         ),
         .target(
             name: "AvantisSwapSDK",
-            dependencies: [.target(name: "keccaktiny"),
+            dependencies: [.target(name: "aKeccaktiny"),
                            "BigInt"],
             path: "Sources/AvantisSwapSDK"
         ),

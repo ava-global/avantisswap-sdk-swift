@@ -39,7 +39,7 @@ class PairTests: QuickSpec {
             it("returns the correct address") {
                 expect(try Pair.getAddress(tokenA: self.usdc,
                                            tokenB: self.dai))
-                .to(equal("0xadbba1ef326a33fdb754f14e62a96d5278b942bd"))
+                .to(equal("0x35dd4c0af967e1c1108cc765917d28edec52cc9d"))
             }
         }
         
