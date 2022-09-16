@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt",
-                 "5.0.0"..<"5.0.1"),
+                 "5.0.0"..<"5.3.0"),
         .package(url: "https://github.com/Quick/Quick.git",
                  from: "5.0.0"),
         .package(url: "https://github.com/Quick/Nimble.git",
