@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AvantisSwapSDK'
-  s.version = '1.0.6'
+  s.version = '1.0.7'
   s.license = 'MIT'
   s.summary = 'Avantis Swap SDK for Swift'
   s.homepage = 'https://github.com/ava-global/avantisswap-sdk-swift'
@@ -17,8 +17,5 @@ Pod::Spec.new do |s|
     'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(inherited) $(PODS_TARGET_SRCROOT)/Libraries/**'
   }
   s.preserve_paths = 'Libraries/**/module.map'
-
-
   s.dependency 'BigInt', '~> 5.0.0'
-
 end
