@@ -11,14 +11,17 @@ public class Token: Currency {
     
     public let chainId: ChainId
     public let address: String
+    public let imageURL: URL?
     
     public init(chainId: ChainId,
-         address: String,
-         decimals: UInt,
-         symbols: String? = nil,
-         name: String? = nil) {
+                address: String,
+                decimals: UInt,
+                symbols: String? = nil,
+                name: String? = nil,
+                imageURL: URL? = nil) {
         self.chainId = chainId
         self.address = address
+        self.imageURL = imageURL
         
         super.init(decimals: decimals,
                    symbol: symbols,
@@ -36,7 +39,7 @@ public class Token: Currency {
         else if address == other.address {
             throw TokenError.tokenHaveTheSameAddress
         }
-            
+        
         return address.lowercased() < other.address.lowercased()
     }
     
@@ -55,7 +58,7 @@ extension Token {
 }
 
 public enum TokenError: Error,
-                 LocalizedError {
+                        LocalizedError {
     case tokenHaveTheSameAddress
     case tokenAreOnDifferentChains
     
