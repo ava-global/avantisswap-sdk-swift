@@ -20,18 +20,18 @@ public enum TradeType {
 
 public struct Constant {
     
-    public static let factoryAddress = "0xb7926c0430afb07aa7defde6da862ae0bde767bc"
+    public static let factoryAddress = "0x902Cc3BF57e9077e30248b5E6Ef78d0C62C9996E"
     
     public static let factoryAddressMap: [ChainId: String] = [
         ChainId.mainnet: factoryAddress ,
-        ChainId.testnet: "0xb7926c0430afb07aa7defde6da862ae0bde767bc"
+        ChainId.testnet: "0x902Cc3BF57e9077e30248b5E6Ef78d0C62C9996E"
     ]
     
-    public static let initCodeHash: String = "0xecba335299a6693cb2ebc4782e74669b84290b6378ea3a3873c7231a8d7d1074"
+    public static let initCodeHash: String = "0x568da50ca8d8084b9f3b22f341e3f523a51d11309707af8f114037d575133ad9"
     
     public static let initCodeHashMap: [ChainId: String] = [
         ChainId.mainnet: initCodeHash ,
-        ChainId.testnet: "0xecba335299a6693cb2ebc4782e74669b84290b6378ea3a3873c7231a8d7d1074"
+        ChainId.testnet: "0x568da50ca8d8084b9f3b22f341e3f523a51d11309707af8f114037d575133ad9"
     ]
     
     public static let minimumLiquidity: BigUInt = BigUInt(1_000)
