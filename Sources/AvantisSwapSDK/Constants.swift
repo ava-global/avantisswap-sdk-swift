@@ -20,7 +20,7 @@ public enum TradeType {
 
 public struct Constant {
     
-    public static let factoryAddress = "0x902Cc3BF57e9077e30248b5E6Ef78d0C62C9996E"
+    public static let factoryAddress = "0xddA609F8D433A8D2464B14De42CCe5ADc023733B"
     
     public static let factoryAddressMap: [ChainId: String] = [
         ChainId.mainnet: factoryAddress ,
@@ -46,7 +46,7 @@ public struct Constant {
                                symbols: "WBNB",
                                name: "Wrapped BNB"),
         ChainId.testnet: Token(chainId: ChainId.testnet,
-                               address: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                               address: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
                                decimals: 18,
                                symbols: "WBNB",
                                name: "Wrapped BNB")
