@@ -21,25 +21,21 @@ let package = Package(
                  from: "5.0.0"),
         .package(url: "https://github.com/Quick/Nimble.git",
                  from: "10.0.0"),
+        .package(url: "https://github.com/ava-global/web3.swift.git",
+                 branch: "master"),
     ],
     targets: [
         .target(
-            name: "akeccaktiny",
-            dependencies: [],
-            path: "Libraries/keccak-tiny",
-            exclude: ["module.map"]
-        ),
-        .target(
             name: "AvantisSwapSDK",
-            dependencies: [.target(name: "akeccaktiny"),
-                           "BigInt"],
+            dependencies: ["web3.swift",
+                         "BigInt"],
             path: "Sources/AvantisSwapSDK"
         ),
         .testTarget(
             name: "AvantisSwapSDKTests",
             dependencies: ["AvantisSwapSDK",
-                           "Quick",
-                           "Nimble"],
+                         "Quick",
+                         "Nimble"],
             path: "Tests/AvantisSwapSDKTests"
         ),
     ]

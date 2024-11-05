@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import akeccaktiny
+import keccaktiny
 
 extension Data {
     init?(hex: String) {
